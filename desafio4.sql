@@ -1,0 +1,1 @@
+select u.username as usuario, if(sh.user_id = u.id, 'Usuário ativo', 'Usuário inativo') as condicao_usuario from SpotifyClone.user u left join (select distinct user_id from SpotifyClone.streaming_history where year(played_at) = 2021) sh on u.id = sh.user_id order by u.username;
