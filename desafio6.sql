@@ -1,0 +1,1 @@
+select cast(round(min(p.price), 2) as char) as faturamento_minimo, cast(max(p.price) as char) as faturamento_maximo, cast(round(avg(p.price), 2) as char) as faturamento_medio, cast(round(sum(p.price), 2) as char) as faturamento_total from SpotifyClone.plan p inner join SpotifyClone.user u on p.id = u.plan_id;
