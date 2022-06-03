@@ -1,0 +1,1 @@
+select ar.artist_name as artista, al.album_name as album, count(user_id) as seguidores from SpotifyClone.artist ar left join SpotifyClone.album al on ar.id = al.artist_id inner join SpotifyClone.following_artists fa on al.artist_id = fa.artist_id group by al.id order by seguidores desc, artista, album;
