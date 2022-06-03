@@ -1,0 +1,1 @@
+select song_name as nome, count(sh.song_id) as reproducoes from SpotifyClone.song s left join SpotifyClone.streaming_history sh on s.id = sh.song_id where user_id in (select id from SpotifyClone.user where plan_id in (1, 4)) group by s.song_name order by s.song_name;
