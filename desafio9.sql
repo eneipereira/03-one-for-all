@@ -1,0 +1,1 @@
+select count(song_id) as quantidade_musicas_no_historico from SpotifyClone.streaming_history where user_id = (select id from SpotifyClone.user where username = 'Bill');
