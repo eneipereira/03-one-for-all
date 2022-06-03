@@ -1,0 +1,1 @@
+select u.username as usuario, count(sh.song_id) as qtde_musicas_ouvidas, round(sum(s.length/60), 2) as total_minutos from SpotifyClone.user u left join SpotifyClone.streaming_history sh on u.id = sh.user_id left join SpotifyClone.song s on sh.song_id = s.id group by u.username order by u.username;
