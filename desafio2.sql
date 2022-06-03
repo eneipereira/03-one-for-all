@@ -1,0 +1,1 @@
+select count(s.song_name) as cancoes, count(distinct ar.artist_name) as artistas, count(distinct al.album_name) as albuns from SpotifyClone.song s inner join SpotifyClone.album al on s.album_id = al.id inner join SpotifyClone.artist ar on al.artist_id = ar.id;
