@@ -1,0 +1,1 @@
+select song_name as cancao, (select count(song_id) from SpotifyClone.streaming_history where song_id = streaming_history.id) as reproducoes from SpotifyClone.song as streaming_history order by reproducoes desc, song_name limit 2;
